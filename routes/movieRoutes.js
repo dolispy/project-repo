@@ -1,5 +1,5 @@
 const express = require('express');
-const movieValidation = require('../validate');
+const movieValidation = require('../validinfo');
 const { addMovie, getMovies } = require('../controllers/movie.controller');
 
 const router = express.Router();
