@@ -1,9 +1,9 @@
 const express = require('express');
-const movieValidation = require('../validinfo');
+const auth = require('../userAuth');
 const { addMovie, getMovies } = require('../controllers/movie.controller');
 
 const router = express.Router();
-router.get('/movies', getMovies);
-router.post('/movie/add', movieValidation, addMovie)
+router.get('/movies',auth ,getMovies);
+router.post('/movie/add', auth ,addMovie)
 
 module.exports = router;
